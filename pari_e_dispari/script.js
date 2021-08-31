@@ -29,16 +29,29 @@ function () {
 
   // Sommiamo i due numeri;
   var somma = userNumber + cpuNumber
-
+  var sommaEvenOdd = ''
   // Stabiliamo se la somma dei due numeri è pari o dispari(usando una funzione);
-  // Dichiariamo chi ha vinto.;
-  if ((userChoise == 'pari' && isEven(somma)) || (userChoise == 'dispari' && !isEven(somma))) {
-    alert('hai vinto')
+  if (isEven(somma)) {
+    sommaEvenOdd = 'pari'
   } else {
-    alert('hai perso')
+    sommaEvenOdd = 'dispari'
   }
+    
+  // Dichiariamo chi ha vinto e stampo i risultati;
+  var winner = document.getElementById('winner')
+  
+  if ((userChoise == 'pari' && isEven(somma)) || (userChoise == 'dispari' && !isEven(somma))) {
+    winner.innerHTML = 'HAI VINTO'
+  } else {
+    winner.innerHTML = 'HAI PERSO'
+  }
+  
+  document.getElementById('user-choise-out').innerHTML = userChoise
+  document.getElementById('user-number-out').innerHTML = userNumber
+  document.getElementById('cpu-number-out').innerHTML = cpuNumber
+  document.getElementById('somma').innerHTML = somma;
+  document.getElementById('somma-even-odd').innerHTML = sommaEvenOdd
 
-  console.log(`user: ${userChoise} ${userNumber}, cpu: ${cpuNumber}, somma: ${somma}`);
   }
 )
 

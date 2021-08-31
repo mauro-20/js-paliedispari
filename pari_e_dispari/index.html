@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pari e Dispari</title>
-</head>
-<body>
-  
-  <script src="./script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pari e Dispari</title>
+  </head>
+  <body>
+    <h1>Pari o Dispari</h1>
+    <div class="user-inputs">
+      <div class="pari-dispari-box">
+        <p>Segli un opzione</p>
+        <input type="radio" name="user-choise" id="pari" value="pari">
+        <label for="pari">Pari</label>
+        
+        <input type="radio" name="user-choise" id="dispari" value="dispari">
+        <label for="dispari">Dispari</label>
+      </div>
+
+      <label for="user-number">Inserisci un numero da 1 a 5</label>
+      <input id="user-number" type="number" min="1" max="5">
+
+      <button id="gioca">Gioca</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

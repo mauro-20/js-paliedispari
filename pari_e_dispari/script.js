@@ -52,6 +52,7 @@ function () {
   document.getElementById('somma').innerHTML = somma;
   document.getElementById('somma-even-odd').innerHTML = sommaEvenOdd
 
+  document.getElementById('result').classList.add('visible')
   }
 )
 

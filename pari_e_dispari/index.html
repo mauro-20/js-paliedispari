@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Pari e Dispari</title>
   </head>
   <body>
-    <h1>Pari o Dispari</h1>
-    <!-- form -->
-    <div class="user-inputs">
-      <div class="pari-dispari-box">
-        <p>Segli un opzione</p>
-        <input type="radio" name="user-choise" id="pari" value="pari">
-        <label for="pari">Pari</label>
-        
-        <input type="radio" name="user-choise" id="dispari" value="dispari">
-        <label for="dispari">Dispari</label>
+    <div class="wrapper">
+      <h1>Pari o Dispari</h1>
+      <!-- form -->
+      <div class="user-inputs">
+        <div class="pari-dispari-box">
+          <p>Segli un opzione</p>
+          <input type="radio" name="user-choise" id="pari" value="pari">
+          <label for="pari">Pari</label>
+          
+          <input type="radio" name="user-choise" id="dispari" value="dispari">
+          <label for="dispari">Dispari</label>
+        </div>
+        <div class="number-box">
+          <label for="user-number">Inserisci un numero da 1 a 5</label>
+          <input id="user-number" type="number" min="1" max="5">
+        </div>
+        <button id="gioca" class="btn">Gioca</button>
       </div>
-
-      <label for="user-number">Inserisci un numero da 1 a 5</label>
-      <input id="user-number" type="number" min="1" max="5">
-
-      <button id="gioca">Gioca</button>
+      <!-- /form -->
+      <!-- result -->
+      <div id="result" class="result">
+        <h2 id="winner"></h2>
+        <div class="result-wrapper">
+          <p>Hai scelto: <span id="user-choise-out"></span> <span id="user-number-out"></span></p>
+          <p>Il computer ha fatto: <span id="cpu-number-out"></span></p>
+          <p>La somma <span id="somma"></span> è <span id="somma-even-odd"></span></p>
+        </div>
+      </div>
+      <!-- /result -->
+      
+      <script src="./script.js"></script>
     </div>
-    <!-- /form -->
-    <!-- result -->
-    <div class="result">
-      <h2 id="winner"></h2>
-      <p>Hai scelto: <span id="user-choise-out"></span> <span id="user-number-out"></span></p>
-      <p>Il computer: <span id="cpu-number-out"></span></p>
-      <p>La somma <span id="somma"></span> è <span id="somma-even-odd"></span></p>
-    </div>
-    <!-- /result -->
-
-    <script src="./script.js"></script>
   </body>
 </html>
